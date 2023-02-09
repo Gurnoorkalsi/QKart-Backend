@@ -1,4 +1,4 @@
-import { Alert, Button, CircularProgress, Stack, TextField } from "@mui/material";
+import { Button, CircularProgress, Stack, TextField } from "@mui/material";
 import { Box } from "@mui/system";
 import axios from "axios";
 import { useSnackbar } from "notistack";
@@ -33,7 +33,7 @@ const Login = () => {
    *      "balance": 5000
    * }
    *
-   * le for failed response from backend:
+   * Example for failed response from backend:
    * HTTP 400
    * {
    *      "success": false,
@@ -44,7 +44,7 @@ const Login = () => {
   const login = async (formData) => {
     setIsLoading(true);
     if(validateInput(formData)){
-      axios.post(`${config.endpoint}`+"/auth/login",{
+      axios.post(`${config.endpoint}/auth/login`,{
         username: formData.username,
         password: formData.password
       }).then((response)=>{
@@ -121,7 +121,7 @@ const Login = () => {
       justifyContent="space-between"
       minHeight="100vh"
     >
-      <Header hasHiddenAuthButtons />
+      <Header hasHiddenAuthButtons /> 
       <Box className="content">
         <Stack spacing={2} className="form">
           <h2 className="title">Login</h2>
