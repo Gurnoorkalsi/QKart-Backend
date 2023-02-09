@@ -158,7 +158,7 @@ const Products = () => {
   };
 
   const optimizedDebounce = useCallback(debounceSearch, []);
-  useEffect(performAgit aPICall, []);
+  useEffect(performAPICall, []);
 
   return (
     <div>
