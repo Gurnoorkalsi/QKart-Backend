@@ -17,7 +17,6 @@
 
 .product-grid {
   width: 100%;
-  /* padding: 16px; */
 }
 
 .hero-heading {
@@ -52,6 +51,13 @@
 .search-desktop {
   display: none !important;
 }
+.product-area {
+  display : flex;
+  flex-direction: column;
+}
+.cartContainer{
+  background-color: #E9F5E1;
+} 
 
 @media screen and (min-width: 768px) {
   .hero {
@@ -69,5 +75,14 @@
   }
   .search-desktop {
     display: block !important;
+  }
+  .product-area {
+    flex-direction: row;
+  }
+  .products {
+    flex: 75%;
+  }
+  .cartContainer{
+    flex: 25%;
   }
 }

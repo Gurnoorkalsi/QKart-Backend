@@ -18,6 +18,7 @@ router.post("/", verifyAuth, async (req, res) => {
       return handleError(res, err);
     }
     if (!product) {
+      console.log("wtf");
       return res
         .status(404)
         .json({ success: false, message: "Product doesn't exist" });

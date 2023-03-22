@@ -17,7 +17,7 @@ const Header = ({ children, hasHiddenAuthButtons }) => {
       <Box sx={{width: 1/3}}>
           {children}
       </Box>
-      {hasHiddenAuthButtons == true ? (
+      {hasHiddenAuthButtons === true ? (
         <Button
           className="explore-button"
           startIcon={<ArrowBackIcon />}
@@ -33,7 +33,6 @@ const Header = ({ children, hasHiddenAuthButtons }) => {
           <Button
             startIcon={<Avatar src="../../public/avatar.png" alt="crio.do" />}
             variant="string"
-            textTransform="none"
             onClick={() => {}}
           >
             {username}
