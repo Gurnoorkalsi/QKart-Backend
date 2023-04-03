@@ -13,7 +13,7 @@ import "./Cart.css";
 // Definition of Data Structures used
 /**
  * @typedef {Object} Product - Data on product available to buy
- *
+ * 
  * @property {string} name - The name or title of the product
  * @property {string} category - The category that the product belongs to
  * @property {number} cost - The price to buy the product
@@ -114,20 +114,25 @@ const ItemQuantity = ({ value, handleAdd, handleDelete }) => {
 
 /**
  * Component to display the Cart view
- *
+ * 
  * @param { Array.<Product> } products
  *    Array of objects with complete data of all available products
- *
+ * 
  * @param { Array.<Product> } items
  *    Array of objects with complete data on products in cart
- *
+ * 
  * @param {Function} handleDelete
  *    Current quantity of product in cart
- *
- *
+ * 
+ * @param {Boolean} isReadOnly
+ *    If product quantity on cart is to be displayed as read only without the + - options to change quantity
+ * 
  */
-const Cart = ({ products, items = [], handleQuantity }) => {
-  const history = useHistory();
+const Cart = ({
+  products,
+  items = [],
+  handleQuantity,
+}) => {
 
   if (!items.length) {
     return (
